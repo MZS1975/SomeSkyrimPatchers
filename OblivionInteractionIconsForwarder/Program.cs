@@ -11,9 +11,15 @@ namespace OblivionInteractionIconsForwarder
         public static async Task<int> Main(string[] args)
         {
             return await SynthesisPipeline.Instance
+                .AddRunnabilityCheck(CheckRunnability)
                 .AddPatch<ISkyrimMod, ISkyrimModGetter>(RunPatch)
                 .SetTypicalOpen(GameRelease.SkyrimSE, "skymojibase-patcher.esp")
                 .Run(args);
+        }
+
+        private static void CheckRunnability(IRunnabilityState state)
+        {
+            state.LoadOrder.AssertListsMod("skymojibase.esl");
         }
 
         private static void RunPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)

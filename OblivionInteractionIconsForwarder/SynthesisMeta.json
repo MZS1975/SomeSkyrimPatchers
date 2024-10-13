@@ -1,0 +1,16 @@
+{
+  "Nickname": "OblivionInteractionIconsForwarder",
+  "Visibility": "Visible",
+  "OneLineDescription": "Oblivion Interaction Icon Forwarder",
+  "LongDescription": "Forwards the \"ActivateTextOverride\" from Oblivion Interaction Icons (https://www.nexusmods.com/skyrimspecialedition/mods/52743) to the last winning override and thus keeping the change of that mod intact.",
+  "PreferredAutoVersioning": "LatestDefaultBranch",
+  "RequiredMods": [
+    "skymojibase.esl"
+  ],
+  "TargetedReleases": [
+    "SkyrimSE",
+    "SkyrimVR",
+    "EnderalSE",
+    "SkyrimSEGog"
+  ]
+}
